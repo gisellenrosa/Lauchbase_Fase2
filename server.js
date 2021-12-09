@@ -12,7 +12,11 @@ nunjucks.configure("views", {
 })
 
 server.get("/", function (req, res){
-    return res.render("index")
+    return res.render("home")
+})
+
+server.get("/about", function (req, res){
+    return res.render("about.html")
 })
 
 server.listen(3000, function(req, res) {
